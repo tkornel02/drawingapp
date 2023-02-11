@@ -23,7 +23,7 @@ public class Main implements Runnable {
 		JButton rect = new JButton("Rectangle");
 		JButton circle = new JButton("Circle");
 		JButton curve = new JButton("Curve");
-
+		JButton clear = new JButton("Clear Canvas");
 		JPanel west = new JPanel();
 		BoxLayout box = new BoxLayout(west, BoxLayout.Y_AXIS);
 		west.setLayout(box);
@@ -33,6 +33,7 @@ public class Main implements Runnable {
 		west.add(rect);
 		west.add(circle);
 		west.add(curve);
+		west.add(clear);
 		west.add(Box.createRigidArea(new Dimension(0, 15)));
 		west.add(color);
 
@@ -51,7 +52,7 @@ public class Main implements Runnable {
 		circle.addActionListener(bl);
 		line.addActionListener(bl);
 		curve.addActionListener(bl);
-
+		clear.addActionListener(e->mc.clearCanvas());
 		ColorChanger cch = new ColorChanger();
 		color.addActionListener(cch);
 

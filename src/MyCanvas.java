@@ -26,13 +26,16 @@ public class MyCanvas extends JComponent {
 	/** The default size */
 	private Dimension d = new Dimension(500,500);
 	
-	public Graphics getBottom() {
-		return bottom.getGraphics();
-	}
+	public Graphics getBottom() {return bottom.getGraphics();	}
 	public Graphics getTop() {
 		return top.getGraphics();
 	}
-	
+	public void clearCanvas(){
+		bottom.getGraphics().clearRect(0,0,d.width,d.height);
+		bottom.getGraphics().setColor(Color.white);
+		bottom.getGraphics().fillRect(0,0,d.width, d.height);
+		this.update(this.getGraphics());
+	}
 	public Dimension getMinimumSize() { 
 		return d;
 	}
