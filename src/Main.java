@@ -51,8 +51,8 @@ public class Main implements Runnable {
 		rect.addActionListener(bl);
 		circle.addActionListener(bl);
 		line.addActionListener(bl);
-		curve.addActionListener(bl);
 		clear.addActionListener(e->mc.clearCanvas());
+		curve.addActionListener(bl);
 		ColorChanger cch = new ColorChanger();
 		color.addActionListener(cch);
 
