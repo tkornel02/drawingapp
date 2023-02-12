@@ -29,6 +29,8 @@ public class ButtonListener implements ActionListener {
 			mld.setDelegate(new LineDraw());
 		} else if ("Curve".equals(cmd)) {
 			mld.setDelegate(new CurveDraw());
+		} else if ("Eraser".equals(cmd)) {
+			mld.setDelegate(new Eraser());
 		}
 
 		if (last != null) last.setEnabled(true);

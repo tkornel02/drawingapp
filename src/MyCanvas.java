@@ -31,8 +31,8 @@ public class MyCanvas extends JComponent {
 		return top.getGraphics();
 	}
 	public void clearCanvas(){
-		bottom.getGraphics().setColor(Color.white);
 		bottom.getGraphics().clearRect(0,0,d.width,d.height);
+		bottom.getGraphics().setColor(Color.white);
 		bottom.getGraphics().fillRect(0,0,d.width, d.height);
 		this.update(this.getGraphics());
 	}
