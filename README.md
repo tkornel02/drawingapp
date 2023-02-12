@@ -1,2 +1,2 @@
 # drawingapp
-Simple Paint-like drawing app with various tools
+Simple Paint-like drawing app in Java with various tools
