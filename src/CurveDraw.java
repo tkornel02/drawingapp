@@ -5,6 +5,7 @@ public class CurveDraw extends Draw{
     @Override
     protected void makeDraw(Graphics g) {
         g.drawLine(endx,endy,endx,endy);
+        
     }
     @Override
     public void mouseDragged(MouseEvent arg0){

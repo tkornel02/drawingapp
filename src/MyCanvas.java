@@ -30,6 +30,10 @@ public class MyCanvas extends JComponent {
 	public Graphics getTop() {
 		return top.getGraphics();
 	}
+
+	public BufferedImage getTopImg(){
+		return top;
+	}
 	public void clearCanvas(){
 		bottom.getGraphics().clearRect(0,0,d.width,d.height);
 		bottom.getGraphics().setColor(Color.white);

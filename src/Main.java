@@ -1,13 +1,9 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+import javax.swing.*;
 
 /**
  * This class contains the entry point to the application. It initializes the
@@ -25,6 +21,7 @@ public class Main implements Runnable {
 		JButton curve = new JButton("Curve");
 		JButton eraser = new JButton("Eraser");
 		JButton clear = new JButton("Clear Canvas");
+		JButton save = new JButton("Save as PNG");
 		JPanel west = new JPanel();
 		BoxLayout box = new BoxLayout(west, BoxLayout.Y_AXIS);
 		west.setLayout(box);
@@ -36,6 +33,7 @@ public class Main implements Runnable {
 		west.add(curve);
 		west.add(eraser);
 		west.add(clear);
+		west.add(save);
 		west.add(Box.createRigidArea(new Dimension(0, 15)));
 		west.add(color);
 
@@ -56,6 +54,19 @@ public class Main implements Runnable {
 		curve.addActionListener(bl);
 		eraser.addActionListener(bl);
 		clear.addActionListener(e->mc.clearCanvas());
+
+		class SaveButtonListener implements ActionListener {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+
+				IOHandler ioh = new IOHandler(mc);
+			}
+		};
+
+		save.addActionListener(new SaveButtonListener());
+
 		ColorChanger cch = new ColorChanger();
 		color.addActionListener(cch);
 
