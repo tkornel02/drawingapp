@@ -16,7 +16,7 @@ public class IOHandler {
 
     public void saveAsPNG(){
         try {
-            if (ImageIO.write(mc.getTopImg(), "png", new File("./" + savename + ".png")))
+            if (ImageIO.write(mc.getImage(), "png", new File("./" + savename + ".png")))
             {
                 System.out.println("-- saved");
             }

@@ -59,7 +59,10 @@ public class Main implements Runnable {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				IOHandler ioh = new IOHandler(mc);
+
+				String userInput = JOptionPane.showInputDialog(null, "Enter name of file (.jpg not needed):");
+
+				IOHandler ioh = new IOHandler(mc,userInput);
 				ioh.saveAsPNG();
 			}
 		};
