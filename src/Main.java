@@ -59,9 +59,8 @@ public class Main implements Runnable {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
-
 				IOHandler ioh = new IOHandler(mc);
+				ioh.saveAsPNG();
 			}
 		};
 
