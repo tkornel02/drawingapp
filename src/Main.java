@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.*;
 
@@ -15,6 +16,7 @@ public class Main implements Runnable {
 		JFrame frame = new JFrame();
 
 		JButton line = new JButton("Line");
+
 		JButton color = new JButton("Color");
 		JButton rect = new JButton("Rectangle");
 		JButton circle = new JButton("Circle");
@@ -22,22 +24,22 @@ public class Main implements Runnable {
 		JButton eraser = new JButton("Eraser");
 		JButton clear = new JButton("Clear Canvas");
 		JButton save = new JButton("Save as PNG");
-		JPanel west = new JPanel();
-		BoxLayout box = new BoxLayout(west, BoxLayout.Y_AXIS);
-		west.setLayout(box);
+		JPanel buttonPanelNorth = new JPanel();
+		BoxLayout box = new BoxLayout(buttonPanelNorth, BoxLayout.X_AXIS);
+		buttonPanelNorth.setLayout(box);
 
-		west.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
-		west.add(line);
-		west.add(rect);
-		west.add(circle);
-		west.add(curve);
-		west.add(eraser);
-		west.add(clear);
-		west.add(save);
-		west.add(Box.createRigidArea(new Dimension(0, 15)));
-		west.add(color);
+		buttonPanelNorth.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+		buttonPanelNorth.add(line);
+		buttonPanelNorth.add(rect);
+		buttonPanelNorth.add(circle);
+		buttonPanelNorth.add(curve);
+		buttonPanelNorth.add(eraser);
+		buttonPanelNorth.add(clear);
+		buttonPanelNorth.add(save);
+		buttonPanelNorth.add(Box.createRigidArea(new Dimension(15, 0)));
+		buttonPanelNorth.add(color);
 
-		frame.add(west, BorderLayout.WEST);
+		frame.add(buttonPanelNorth, BorderLayout.NORTH);
 
 		MyCanvas mc = new MyCanvas();
 		JScrollPane jsp = new JScrollPane(mc);

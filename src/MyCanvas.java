@@ -41,10 +41,14 @@ public class MyCanvas extends JComponent {
 	public BufferedImage getBottImg(){
 		return bottom;
 	}
+	public void clearBufferedIMG(BufferedImage bi, int width, int height){
+		bi.getGraphics().clearRect(0,0,width,height);
+		bi.getGraphics().setColor(Color.white);
+		bi.getGraphics().fillRect(0,0,width, height);
+	}
 	public void clearCanvas(){
-		bottom.getGraphics().clearRect(0,0,d.width,d.height);
-		bottom.getGraphics().setColor(Color.white);
-		bottom.getGraphics().fillRect(0,0,d.width, d.height);
+		this.clearBufferedIMG(top,d.width,d.height);
+		this.clearBufferedIMG(bottom,d.width,d.height);
 		this.update(this.getGraphics());
 	}
 	public Dimension getMinimumSize() { 

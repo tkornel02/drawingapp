@@ -60,7 +60,6 @@ public static void setColor(Color c){color = c;}
 	
 	public void mouseReleased(MouseEvent arg0) {
 		realDraw(arg0, canvas.getBottom());
-
 	}
 
 	/** Draws on the top layer of the MyCanvas object. */
